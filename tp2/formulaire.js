@@ -41,7 +41,7 @@ function validation(){
       
      else
      
-        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value + " 😀";
+        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value;
      
      
      }
