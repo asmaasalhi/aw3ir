@@ -1,9 +1,14 @@
+
 function validation(){
 
 
     this.event.preventDefault();
     var test = true;
     var text = "";
+    
+
+   
+
 
    if (document.getElementById("nom").value.length < 5 || document.getElementById("nom").value == "") 
      
@@ -29,25 +34,29 @@ function validation(){
 	
     test = false;
 
-    if (test) {
+   if (test) {
 
+      document.getElementById("error").style.display = 'inline';
         if (text.length > 8)
      
         document.getElementById("error").innerHTML = "Les champs " + text + " doivent contenir au moins cinq caractères!";
      
         else 
      
-        document.getElementById("error").innerHTML = "Le champ " + text + " doit contenir au moins cinq caractères!";}
+        document.getElementById("error").innerHTML = "Le champ " + text + " doit contenir au moins cinq caractères!";
+   }
       
-     else
-     
-        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value;
-     
-     
+     else{
+      document.getElementById("error").style.display = 'none';
+      document.getElementById("resultat").style.display = 'inline';
+      document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value;
      }
-    
-
-
-
-    
+     
+       
+       
 }
+    
+
+
+
+    
