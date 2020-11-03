@@ -36,6 +36,7 @@ function validation(){
 
    if (test) {
 
+      document.getElementById("resultat").style.display = 'none';
       document.getElementById("error").style.display = 'inline';
         if (text.length > 8)
      
