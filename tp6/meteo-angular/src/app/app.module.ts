@@ -20,6 +20,7 @@ import { NeteoDetailComponent } from './neteo-detail/neteo-detail.component';
     FormsModule
   ],
   
+  
   providers: [],
   bootstrap: [AppComponent]
 }) 
