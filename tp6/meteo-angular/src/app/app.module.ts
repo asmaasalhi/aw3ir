@@ -12,7 +12,7 @@ import { NeteoDetailComponent } from './neteo-detail/neteo-detail.component';
   declarations: [
     AppComponent,
     MeteoComponent,
-    NeteoDetailComponent
+    NeteoDetailComponent,
   ],
   imports: [
     BrowserModule,

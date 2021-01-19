@@ -318,7 +318,7 @@ class MeteoService {
     getMeteo(name) {
         console.log('from service', name);
         let m = new _meteoItem__WEBPACK_IMPORTED_MODULE_1__["MeteoItem"]();
-        return fetch('https://api.openweathermap.org/data/2.5/weather/?q=' + name + '&units=metric&lang=fr&appid=VOTRE_CLE_OPENWEATHERMAP')
+        return fetch('https://api.openweathermap.org/data/2.5/weather/?q=' + name + '&units=metric&lang=fr&appid=3f74c125e10f79dca60043c6f245bf23')
             .then(function (response) {
             return response.json();
         })

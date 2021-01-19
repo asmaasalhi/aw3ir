@@ -14,7 +14,7 @@ export class MeteoService {
 
     let m = new MeteoItem();
 
-    return fetch('https://api.openweathermap.org/data/2.5/weather/?q=' + name + '&units=metric&lang=fr&appid=VOTRE_CLE_OPENWEATHERMAP')
+    return fetch('https://api.openweathermap.org/data/2.5/weather/?q=' + name + '&units=metric&lang=fr&appid=3f74c125e10f79dca60043c6f245bf23')
       .then(function (response) {
         return response.json();
       })
@@ -23,7 +23,10 @@ export class MeteoService {
         // test du code retour
         // 200 = OK
         // 404 = city not found 
-        if (json.cod === 200) {
+        console.log('halloween');
+         if (json.cod === 200) {
+          console.log(json);
+          console.log("testing");
           return Promise.resolve(json);
         } else {
           m.weather = json;

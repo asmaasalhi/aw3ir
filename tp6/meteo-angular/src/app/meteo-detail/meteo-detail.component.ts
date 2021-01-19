@@ -21,8 +21,18 @@ export class MeteoDetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    console.log("hello me e ");
     this.getMeteo();
+    
   }
+
+
+  /*ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.name = params['name'];
+    });
+  }*/
+  
 
   getMeteo(): void {
     const name = this.route.snapshot.paramMap.get('name');
@@ -30,6 +40,8 @@ export class MeteoDetailComponent implements OnInit {
     this.meteoService.getMeteo(name)
       .then(meteo => this.meteo = meteo)
       .catch(fail => this.meteo = fail);
+     
+      console.log('this is meto', this.meteo);
   }
 
 }
