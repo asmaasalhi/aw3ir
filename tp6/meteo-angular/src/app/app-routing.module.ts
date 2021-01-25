@@ -7,11 +7,13 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { MeteoItem } from './meteoItem';
 import { MeteoService } from './services/meteo.service';
+
 const routes: Routes = [
 
- { path: 'meteo/:name',  // la page  affichant la météo prendra comme paramètre 'name'
-  component: MeteoDetailComponent }, // Ce component fera l'appel AJAX et afficher les données reçues par openWeatherMap
+{ path: 'meteo/:name',  // la page  affichant la météo prendra comme paramètre 'name'
+  component: MeteoDetailComponent}, // Ce component fera l'appel AJAX et afficher les données reçues par openWeatherMap
 
+  { path: '', component: MeteoComponent },
 
 ];
 
